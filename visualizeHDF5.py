@@ -4,7 +4,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 from PIL import Image
 
-inputFileName = '/home/thanuja/projects/data/drosophilaLarva_ssTEM/dataset01_hdf5/train/raw/00.hdf5'
+# inputFileName = '/home/thanuja/projects/data/drosophilaLarva_ssTEM/dataset01_hdf5/train/raw/00.hdf5'
+inputFileName = '/home/thanuja/projects/external/gala/tests/example-data/train-ws.lzf.h5'
 # inputFileName = 'file1.h5'
 
 with h5py.File(inputFileName) as f:
