@@ -10,11 +10,13 @@ import os
 from scipy import misc
 '''
 
-outputH5fileName = '/home/thanuja/projects/data/drosophilaLarva_ssTEM/dataset01_hdf5/train/test_gt.h5'
+outputH5fileName = '/home/thanuja/projects/data/drosophilaLarva_ssTEM/dataset01_hdf5/test/test_gt.h5'
 
 inputDir = '/home/thanuja/projects/data/toyData/set8/groundtruth';
-imagePath = glob.glob(inputDir+'/*.tif') 
-
+imagePath = sorted(glob.glob(inputDir+'/*.tif') )
+print(imagePath)
+# 0-9 for validation
+# 0-2 for training
 im_array = numpy.array( [numpy.array(Image.open(imagePath[i]).convert('L'), 'f') for i in range(0,9)] )
 
 # uncomment the following line for probability maps s.t it is converted into probabilities [0,1]
